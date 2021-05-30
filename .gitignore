@@ -1,0 +1,7 @@
+# Directories to be ignored
+.vs/
+Debug/
+Release/
+
+# Files to be ignored
+*.user
