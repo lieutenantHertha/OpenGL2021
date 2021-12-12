@@ -1,7 +1,11 @@
 # Directories to be ignored
 .vs/
-Debug/
-Release/
+.git/
+bin/
+int-bin/
 
 # Files to be ignored
-*.user
+**.user
+**.filters
+**.vcxproj
+*.sln
