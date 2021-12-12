@@ -6,6 +6,6 @@ int-bin/
 
 # Files to be ignored
 **.user
-**.vcxproj.filters
-**.vcxproj
-*.sln
+Demo/Demo.vcxproj.filters
+Demo/Demo.vcxproj
+**.sln
