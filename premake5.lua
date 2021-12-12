@@ -1,6 +1,6 @@
--- premake5.lua
+-- premake5 script
 workspace "OpenGL2021"
-    configurations{"Debug", "Release"}
+    configurations {"Debug", "Release"}
     architecture "x86_64"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
@@ -9,10 +9,10 @@ project "Demo"
     kind "ConsoleApp"
     language "C++"
     cppdialect "C++17"
-    location "%{wks.location}/Demo"
+    location "%{wks.location}/%{prj.name}"
 
-    targetdir ("%{wks.location}/bin/"..outputdir.."/%{prj.name}")
-    objdir ("%{wks.location}/int-bin/"..outputdir.."/%{prj.name}")
+    targetdir("%{wks.location}/bin/"..outputdir.."/%{prj.name}")
+    objdir("%{wks.location}/bin-int/".. outputdir.."/%{prj.name}")
 
     files
     {
@@ -56,7 +56,7 @@ project "Demo"
     links
     {
         "glew32s.lib",
-        "glfw3.lib",
+        "glfw3.lib", 
         "opengl32.lib"
     }
 
@@ -64,3 +64,8 @@ project "Demo"
         defines "DEBUG"
         runtime "Debug"
         symbols "on"
+
+    filter "configurations:Release"
+        defines "RELEASE"
+        runtime "Release"
+        optimize "on"

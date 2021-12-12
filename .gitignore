@@ -2,10 +2,10 @@
 .vs/
 .git/
 bin/
-int-bin/
+bin-int/
 
 # Files to be ignored
 **.user
-Demo/Demo.vcxproj.filters
-Demo/Demo.vcxproj
+**.vcxproj.filters
+**.vcxproj
 **.sln
